@@ -14,11 +14,27 @@
         }
 
         .contact-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
 
+        .contact-card1 {
+            width: 350px;
+            height: 100px;
+            border: none;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
+        }
         .contact-card {
             width: 340px;
             height: 85px;
@@ -45,7 +61,12 @@
             align-items: center;
             margin-right: 10px;
         }
-
+        .contact-image1 {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            
+        }
         .contact-image {
             width: 50px;
             height: 50px;
@@ -104,25 +125,27 @@
 
     
     <div class="contact-container">
-        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">RUHUNUKETHA</span></h3>
-        <div class="contact-card">
+        <h3 style="text-align:center;"><b>OFFICE OF THE HONORABLE MINISTER</b><br><span class="st2">11 Floor</span></h3>
+        <div class="contact-card1">
             <div class="contact-details">
                 <div class="contact-image-container">
-                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                    <img class="contact-image1" src="R.png" alt="Profile Image">
                 </div>
                 <div>
-                    <div class="name">Mr.Ranjith<br>
-                        <span class="disgnation">Circuit Keeper (Ruhunuketha)</span><br>
+                    <div class="name">MINISTRY OFFICE<br>
+                       
                         <p>
-                         Mobile 1 : <span id="cbr_mobile1">078-4502728</span><br>
-                         Mobile 2 : <span id="cbr_mobile2">0776459085</span>                    
+                         LandLine : <span id="rpm_land">011-2699028</span><br>
+                         Mobile : <span id="rpm_mobile">011-2699028</span><br>
+                         Email : <span id="rpm_mobile">min.irrigation@gmail.com</span>                    
                         </p>
                     </div>
                 </div>
             </div>
             <div class="contact-buttons">
-                <button class="call-button" onclick="callNumber('cbr_mobile1')">Call Mobile 1</button>
-                <button class="call-button" onclick="callNumber('cbr_mobile2')">Call Mobile 2</button>
+                <button class="call-button" onclick="callNumber('rpm_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('rpm_mobile')">Call Mobile</button>
+                <button class="call-button" onclick="callNumber('rpm_mobile')">Send Email</button>
             </div>
             <script>
                 function callNumber(number, isMobile = false) {
@@ -136,24 +159,26 @@
 
         <!-- Add another card below -->
        
-        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">PIBURATHTHAWA</span></h3>
+        <h3 style="text-align:center;"><b>MINISTRY OFFICE</b></h3>
         <div class="contact-card">
             <div class="contact-details">
                 <div class="contact-image-container">
                     <img class="contact-image" src="one.jpg" alt="Profile Image">
                 </div>
                 <div>
-                    <div class="name">Mr. Sumanadasa<br>
-                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                    <div class="name">Hon.Roshan Ranasinghe<br>
+                        <span class="disgnation">Minister of Irrigation</span><br>
                         <p>
-                         Mobile : <span id="cbp_mobile">071-5421334</span>
+                         In.Com: <span id="">300</span><br> 
+                         LandLine : <span id="mi_land">011-2688425</span><br>
+                         Mobile : <span id="mi_mobile">077-2666666</span>                    
                         </p>
                     </div>
                 </div>
             </div>
             <div class="contact-buttons">
-                <button class="call-button" onclick="callNumber('cbp_mobile')">Call Mobile</button>
-              
+                <button class="call-button" onclick="callNumber('mi_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('mi_mobile')">Call Mobile</button>
             </div>
             <script>
                 function callNumber(number, isMobile = false) {
@@ -162,25 +187,28 @@
                 }
             </script>
         </div>
-    
-        
+
+        <h3 style="text-align:center;"><b>OTHER OFFICERS</b><br><span class="st2">MINISTRY OFFICE</span></h3>
+
         <div class="contact-card">
             <div class="contact-details">
                 <div class="contact-image-container">
                     <img class="contact-image" src="one.jpg" alt="Profile Image">
                 </div>
                 <div>
-                    <div class="name">Mr. Priyantha<br>
-                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                    <div class="name">Mr.R Samarawickrama<br>
+                        <span class="disgnation">Private Secretary</span><br>
                         <p>
-                         Mobile : <span id="cbp2_mobile">'071-2760586</span>
+                         In.Com: <span id="">213</span><br> 
+                         LandLine : <span id="ps_land">011-2687389</span><br>
+                         Mobile : <span id="ps_mobile">071-5609454</span>                    
                         </p>
                     </div>
                 </div>
             </div>
             <div class="contact-buttons">
-                <button class="call-button" onclick="callNumber('cbp2_mobile')">Call Mobile</button>
-              
+                <button class="call-button" onclick="callNumber('ps_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('ps_mobile')">Call Mobile</button>
             </div>
             <script>
                 function callNumber(number, isMobile = false) {
@@ -189,7 +217,123 @@
                 }
             </script>
         </div>
-    
+
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Eng.Ivan De Silva<br>
+                        <span class="disgnation">Consultant</span><br>
+                        <p>
+                         In.Com: <span id="">201</span><br> 
+                         LandLine : <span id="c_land">011-2687234</span><br>
+                         Mobile : <span id="c_mobile">077-5666711</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('c_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('c_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+      
+
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.A.S.Chinthaka<br>
+                        <span class="disgnation">Co-ordinating Secretary</span><br>
+                        <p>
+                         In.Com: <span id="">216</span><br> 
+                         LandLine : <span id="cos_land">011-2687389</span><br>
+                         Mobile : <span id="cos_mobile">077-3844746</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cos_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('cos_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Major:D.Mahaliyana<br>
+                        <span class="disgnation">Co-ordinating Secretary</span><br>
+                        <p>
+                         
+                         LandLine : <span id="cos2_land">027-2227052</span><br>
+                         Mobile : <span id="cos2_mobile">077-2243700</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cos2_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('cos2_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+
+
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.D.S Amarathunaga<br>
+                        <span class="disgnation">Media Secretary</span><br>
+                        <p>
+                        
+                         LandLine : <span id="ms_land">011-2699034</span><br>
+                         Mobile : <span id="ms_mobile">071-9964883</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('ms_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('ms_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
 
 
