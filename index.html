@@ -106,6 +106,19 @@
             height: 25px;
             font-size: x-small;
         }
+        .call-button2 {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color:orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            font-size: x-small;
+        }
+
 
         p {
             color: gray;
@@ -125,29 +138,31 @@
 
     
     <div class="contact-container">
-        <h3 style="text-align:center;"><b>OFFICE OF THE HONORABLE MINISTER</b><br><span class="st2">11 Floor</span></h3>
+        <h3 style="text-align:center;"><b>MAHAWELI SECURITY CORPS</b><br><span class="st2">Mahaweli Security Corps , Digana , Nilagama</span></h3>
         <div class="contact-card1">
             <div class="contact-details">
                 <div class="contact-image-container">
                     <img class="contact-image1" src="R.png" alt="Profile Image">
                 </div>
                 <div>
-                    <div class="name">MINISTRY OFFICE<br>
+                    <div class="name">OFFICE<br>
                        
                         <p>
-                         LandLine : <span id="rpm_land">011-2699028</span><br>
-                         Mobile : <span id="rpm_mobile">011-2699028</span><br>
-                         Email : <span id="rpm_mobile">min.irrigation@gmail.com</span>                    
+                         LandLine : <span id="rpm_land">081-2374384</span><br>
+                         Email : <span id="email_one">mscadoffice1985@gmail.com</span>                    
                         </p>
                     </div>
                 </div>
             </div>
             <div class="contact-buttons">
                 <button class="call-button" onclick="callNumber('rpm_land')"> Call LandLine</button>
-                <button class="call-button" onclick="callNumber('rpm_mobile')">Call Mobile</button>
-                <button class="call-button" onclick="callNumber('rpm_mobile')">Send Email</button>
+                <button class="call-button2"  onclick="openEmailApp_one()">Send Email</button>
             </div>
             <script>
+                 function openEmailApp_one() {
+                    var email_one = document.getElementById('email_one').textContent;
+                    window.location.href = 'mailto:' + email_one;
+                }
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
                     window.location.href = prefix + document.getElementById(number).textContent;
